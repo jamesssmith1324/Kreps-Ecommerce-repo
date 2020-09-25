@@ -1,0 +1,215 @@
+.title{
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.title h1{
+    font-size: 3em;
+}
+
+.container{
+    display: flex;
+    height: 300%;
+}
+
+.products{
+    flex: 4;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, 50%);
+    grid-row-gap: 20px;
+}
+
+.products h4{
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.5);
+    width: 200%;
+    text-align: center;
+    align-self: center;
+}
+
+.product{
+    height: 200px;
+    width: 90%;
+    display: flex;
+    border-right: 3px solid rgb(0, 140, 255);
+}
+
+.product img{
+    width: 200px;
+}
+
+.product .productInfo{
+    border-bottom: none;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product .productInfo h3{
+    font-size: 1.5em;
+}
+
+.product .productInfo span{
+    font-size: 1em;
+}
+.product .productInfo div{
+    height: 100%;
+}
+.product .productInfo a{
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.product .productInfo a:hover{
+    color: rgb(0, 140, 255);
+}
+
+
+.paymentSection{
+    flex: 3;
+    /* border: 1px solid  blue; */
+} 
+
+.totalToPay{
+    /* border: 1px solid red; */
+    font-size: 1.5em;
+    width: 80%;
+    padding: 10px;
+    /* background: #E7E7E7; */
+    margin: 0 auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.totalToPay div{
+    margin: 30px 0 ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalToPay select{
+    margin: 30px 0;
+    padding: 10px 5px 10px 0 ;
+    font-size: 0.8em;
+    border: none;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #555;
+}
+
+.totalToPay button{
+    width: 100%;
+    padding: 16px 0;
+    background-color: rgb(0, 140, 255);
+    border: 2px solid rgb(0, 140, 255);
+    font-size: 0.8em;
+    color: white;
+    transition: 0.3s;
+}
+
+.totalToPay button:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: rgb(0, 140, 255);
+}
+
+@media(max-width: 1500px){
+    .product{
+        height: 150px;
+    }
+    .product img{
+        width: 150px;
+    }
+    .product .productInfo h3{
+        font-size: 1.1em;
+    }
+    .totalToPay{
+        font-size: 1.3em;
+        width: 70%;
+    }
+}
+
+
+@media(max-width: 1200px){
+    .products{
+        flex: 4;
+        margin: 0;
+        grid-template-columns: repeat(auto-fit, 100%);
+        grid-gap: 20px;
+    }
+    .products h3{
+        width: 100%;
+    }
+}
+
+@media(max-width: 900px){
+    .container{
+        flex-direction: column;
+    }
+    .products{
+        flex: 1;
+        margin: 0;
+        grid-template-columns: repeat(auto-fit, 100%);
+        grid-gap: 20px;
+    }
+    .paymentSection{
+        flex: 1;
+        margin: 20px auto;
+        width: 90%;
+        /* border: 1px solid  blue; */
+    } 
+
+    .totalToPay{
+        font-size: 1.5em;
+        width: 100%;
+        padding: 10px;
+        background: #E7E7E7;
+    }
+
+    .product{
+        height: 200px;
+        width: 90%;
+        display: flex;
+        border-right: 3px solid rgb(0, 140, 255);
+    }
+    
+    .product img{
+        width: 200px;
+    }
+    
+    .product .productInfo{
+        border-bottom: none;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .product .productInfo h3{
+        font-size: 1.5em;
+    }
+    
+    .product .productInfo span{
+        font-size: 1em;
+    }
+    .product .productInfo div{
+        height: 100%;
+    }
+}
+
+
+@media(max-width: 600px){
+    .product{
+        height: 150px;
+    }
+    .product img{
+        width: 150px;
+    }
+    .product .productInfo h3{
+        font-size: 1.1em;
+    }
+    .totalToPay{
+        font-size: 1.3em;
+        width: 100%;
+    }
+}

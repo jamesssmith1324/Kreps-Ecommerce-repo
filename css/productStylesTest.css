@@ -1,0 +1,177 @@
+
+.featureProducts{
+    width: 100%;
+    margin: 0 auto;
+    /* FallBack */
+    display: flex;
+    flex-wrap: wrap;
+    /*  */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25%);
+    margin-top: 20px;
+    border: 1px solid red;
+}
+
+.fProduct{
+    margin: 0 auto;
+    height: 400px;
+    cursor: pointer;
+}
+
+
+.fProduct img{
+    width: 300px;
+}
+
+
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 2em;
+    width: 95%;
+    margin: 0 auto;
+}
+
+section .refine{
+    margin-top: 20px;
+    height: 100%;
+    border: 3px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:439px){
+    .fProduct{
+        width: 300px;
+        height: 400px;
+    }
+    .fProduct img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+
+@media(max-width:1360px){
+    .fProduct{
+        height: 350px;
+    }
+    .fProduct img{
+        width: 250px;
+    }
+}
+
+@media(max-width:1150px){
+    .fProduct{
+        height: 300px;
+    }
+    .fProduct img{
+        width: 200px;
+    }
+}
+
+@media(max-width:900px){
+    .fProducts{
+        grid-template-columns: repeat(auto-fit, 50%);
+    }
+    .fProduct{
+        height: 400px;
+    }
+    .fProduct img{
+        width: 300px;
+    }
+}
+
+
+@media(max-width:700px){
+    .fProduct{
+        height: 300px;
+    }
+    .fProduct img{
+        width: 200px;
+    }
+}
+
+
+@media(max-width:450px){
+    .fProducts{
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+    .fProduct{
+        height: 300px;
+    }
+    .fProduct img{
+        width: 200px;
+    }
+}
+
+.fProduct .fProductInfo{
+    border-bottom: 2px solid black;
+}
+
+
+
+
+
+.squareHoverSlider{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.squareHoverSlider .square{
+    position: relative;
+    width: 550px;
+    border: 3px solid black;
+    margin: 20px auto;
+}
+
+.squareHoverSlider .square img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#square1.isVisible{
+    animation: square1Move 1s forwards;
+}
+
+#square2.isVisible{
+    animation: square2Move 1s forwards;
+}
+
+
+@keyframes square1Move{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes square2Move{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 0;
+    }
+}

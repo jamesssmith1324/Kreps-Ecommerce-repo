@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+/* Desktop Nav Bar */
+
+
+.logo{
+    width: 150px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.phoneNav{
+    display: none;
+}
+
+
+.desktopNav ul{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    margin-top: 10px;
+    overflow: hidden;
+    min-height: 10vh;
+}
+
+.desktopNav ul li{
+    list-style: none;
+    transition: 0.3s;
+    font-size: 1.5em;
+}
+
+.desktopNav ul li:first-child{
+    margin-right: 50px;
+}
+.desktopNav ul li:last-child{
+    display: none;
+}
+
+.fa{
+    font-size: 1.5em;
+}
+.desktopNav ul li:hover{
+    transform: scale(1.1);
+    color: rgb(0, 140, 255);
+}
+
+.desktopNav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.desktopNav ul li a:hover{
+    color: rgb(0, 140, 255);
+}
+
+/* Nav Bar Mobile View */
+
+@media(max-width:550px){
+    .desktopNav ul li:last-child{
+        display: flex;
+        margin: 0 20px;
+    }
+    .desktopNav ul li:nth-child(2){
+        display: none;
+    }
+    .desktopNav ul li:nth-child(3){
+        display: none;
+    }
+    .desktopNav ul li:nth-child(4){
+        display: none;
+    }
+
+    .phoneNav{
+        position: absolute;
+        display: flex;
+        transition: 0.5s;
+        left: -100%;
+        width: 100%;
+    }
+
+    .phoneNav.showing{
+        display: flex;
+        left: 0;
+    }
+
+    .phoneNav ul{
+        position: absolute;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-bottom: 5px solid rgb(0, 140, 255);
+    }
+
+    .phoneNav ul li{
+        list-style: none;
+        padding: 20px 0;
+    }
+
+    .phoneNav ul li a{
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+
+.slideshow { 
+    position: relative; 
+    top: 10px;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.imageHolder{
+    display: flex;
+    height: 100%;
+}
+
+.imageHolder img{
+    max-width: 33.333333%;
+}
+
+
+.featureProductTitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indexText{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    padding: 100px 20%;
+    opacity: 0;
+}
+
+.about.isVisible{
+    animation: showAbout 1.5s ease-in-out forwards;
+}
+
+@keyframes showAbout{
+    0%{
+        bottom: -100px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+.indexText h1{
+    font-size: 3em;
+}
+
+.indexText hr{
+    width: 20%;
+    height: 2px;
+    background-color: #008cff;
+    border: none;
+    margin: 5px auto 10px auto;
+}
+
+.indexText p{
+    font-size: 1.2em;
+}
+
+.followUs.isVisible{
+    animation: showFollow 1.5s ease-in-out forwards;
+}
+
+@keyframes showFollow{
+    0%{
+        bottom: -100px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+
+.banner{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner.isVisible{
+    animation: showBanner 1.5s ease-in-out forwards;
+}
+
+@keyframes showBanner{
+    0%{
+        left: -100%;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.banner img{
+    max-width: 33.333333333%;
+}
+
+
+.banner a{
+    position: absolute;
+    border: 3px solid #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    mix-blend-mode: screen;
+    transition: 0.3s;
+    text-align: center;
+}
+
+
+.banner a:hover{
+    cursor: pointer;
+    background-color: white;
+    background-blend-mode: color-burn;
+    color: black;
+}
+
+.socialMediaHeader{
+    text-align: center;
+    margin-top: 20px;
+}
+ 
+
+.socialMedia{
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.socialMedia span{
+    transition: 0.2s;
+}
+
+.socialMedia i{
+    font-size: 4em;
+}
+
+.socialMedia span:nth-child(1){
+    color: #3b5999;
+}
+.socialMedia span:nth-child(2){
+    color: #55acee;
+}
+.socialMedia span:nth-child(3){
+    color: #e4405f;
+}
+
+.socialMedia span:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.footer{
+    border-top: 1px solid black;
+    width: 95%;
+    margin: 0 auto 20px auto;
+}
+
+.fLists{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.75em;
+    margin-top: 20px;
+}
+
+@media(max-width:434px){
+    .fLists{
+        text-align: center;
+        flex-direction: column;
+    }
+    .footerList{
+        margin: 20px 0;
+    }
+}
+
+.footerList{
+    margin-top: 10px;
+}
+
+.footerList ul{
+    list-style: none;
+}
+
+.footerList ul li{
+    margin: 0 20px;
+    padding: 2.5px 0;
+}
+
+.footerList ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.footerList ul li a:hover{
+    text-decoration: underline;
+    color: #008cff;
+}
+
+/* hr{
+    width: 95%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: black;
+    border: none;
+    margin: 20px;
+} */
+
+
+.footer .payment{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer .payment img{
+    margin: 0 10px;
+    width: 50px;
+}
+
+
+.squareHoverSlider{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.squareHoverSlider .square{
+    position: relative;
+    width: 800px;
+    
+    margin: 20px 40px;
+}
+
+
+
+@media(max-width:900px){
+    .squareHoverSlider{
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    .squareHoverSlider .square{
+        margin: 20px auto;
+    }
+}
+
+.squareHoverSlider .square img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.squareHoverSlider #square1.isVisible{
+    animation: square1Move 1.5s forwards;
+}
+
+.squareHoverSlider #square2.isVisible{
+    animation: square2Move 1.5s forwards;
+}
+
+
+@keyframes square1Move{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes square2Move{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 0;
+    }
+}
